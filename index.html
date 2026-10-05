@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Hearth — Authentic Vegetarian & Non-Vegetarian Home Cooking</title>
+  <meta name="description" content="Authentic homemade vegetarian and non-vegetarian meals prepared with fresh ingredients, heirloom recipes, and the warmth of home cooking.">
+
+  <!-- Google Fonts: Editorial Serif + Clean Modern Sans + Handwritten Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-wide nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="The Homemade Hearth Home">
+        <div class="brand-symbol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c2 3 4 5.5 4 8.5a4 4 0 0 1-8 0C8 7.5 10 5 12 2z"></path>
+            <path d="M6 14v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4"></path>
+            <line x1="4" y1="14" x2="20" y2="14"></line>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">The Homemade Hearth</span>
+          <span class="brand-subtitle">Authentic Kitchen & Table</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#what-makes-it-homemade" class="nav-link">Our Story</a>
+        <a href="#vegetarian-experience" class="nav-link">Vegetarian</a>
+        <a href="#non-vegetarian-experience" class="nav-link">Non-Vegetarian</a>
+        <a href="#from-ingredient-to-plate" class="nav-link">Journey</a>
+        <a href="#signature-dishes" class="nav-link">Dishes</a>
+        <a href="#cooking-process" class="nav-link">Process</a>
+        <a href="#food-categories" class="nav-link">Categories</a>
+      </nav>
+
+      <!-- Nav Actions (Sound Ambiance Toggle & CTA) -->
+      <div class="nav-actions">
+        <!-- Interactive Hearth Audio Ambiance -->
+        <button class="ambiance-btn" id="ambianceToggleBtn" title="Toggle gentle kitchen hearth simmering audio">
+          <div class="sound-wave">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span class="ambiance-label">Hearth Sound</span>
+        </button>
+
+        <a href="#signature-dishes" class="btn btn-primary btn-pill">Explore Menu</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="nav-toggle" id="navToggleBtn" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION — "FROM OUR HOME TO YOUR TABLE"
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="eyebrow hero-eyebrow">From Our Home To Your Table</div>
+          <h1 class="hero-title">
+            Homemade Food. Real Ingredients. <em>Made With Love.</em>
+          </h1>
+          <p class="hero-description">
+            Authentic vegetarian and non-vegetarian meals prepared with fresh ingredients, traditional recipes and the warmth of home cooking.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#signature-dishes" class="btn btn-primary">
+              <span>Explore Our Menu</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#cooking-process" class="btn btn-secondary">How We Make It</a>
+          </div>
+
+          <!-- Hero Dietary Badges -->
+          <div class="hero-badges">
+            <div class="hero-badge-item veg">
+              <div class="hero-badge-icon">🌿</div>
+              <div class="hero-badge-text">
+                Pure Vegetarian
+                <span>Fresh Farm Garden</span>
+              </div>
+            </div>
+            <div class="hero-badge-item nonveg">
+              <div class="hero-badge-icon">🔥</div>
+              <div class="hero-badge-text">
+                Rich Non-Veg
+                <span>Slow-Cooked Cuts</span>
+              </div>
+            </div>
+            <div class="hero-badge-item hearth">
+              <div class="hero-badge-icon">🍲</div>
+              <div class="hero-badge-text">
+                100% Homemade
+                <span>Clay & Cast Iron</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Food Composition with 3D Depth & Steam -->
+        <div class="hero-composition" id="heroComposition">
+          <div class="hero-stage">
+            <!-- Ambient Warm Glow behind the dish -->
+            <div class="hero-glow"></div>
+
+            <!-- Central Hot Steaming Curry Dish -->
+            <div class="hero-center-dish">
+              <!-- Canvas steam rises from the center dish -->
+              <canvas class="hero-steam-canvas" id="heroSteamCanvas"></canvas>
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80" alt="Authentic rich homemade curry in brass bowl" loading="eager">
+            </div>
+
+            <!-- Floating Food Composition Items in 3D -->
+            <!-- 1. Fresh Herbs & Vegetables (Top Left) -->
+            <div class="hero-float-item item-herbs" title="Fresh Garden Mint & Coriander">
+              <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=400&q=80" alt="Fresh garden greens and tomatoes">
+            </div>
+
+            <!-- 2. Stone Ground Spices (Top Right) -->
+            <div class="hero-float-item item-spices" title="Aromatic Whole Spices & Turmeric">
+              <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80" alt="Aromatic whole spices">
+            </div>
+
+            <!-- 3. Hand-Puffed Bread / Naan with Ghee (Bottom Left) -->
+            <div class="hero-float-item item-bread" title="Hand-Rolled Flatbreads">
+              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=80" alt="Handmade soft roti and naan">
+            </div>
+
+            <!-- 4. Homestyle Chicken / Biryani Pot (Bottom Right) -->
+            <div class="hero-float-item item-meat" title="Slow Braised Tender Chicken">
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=400&q=80" alt="Slow braised chicken curry">
+            </div>
+
+            <!-- Floating Spice Particles (Cardamom, Star Anise, Chili) -->
+            <svg class="floating-spice-leaf spice-chili" viewBox="0 0 60 60" fill="none">
+              <path d="M12 45 C15 30 35 15 50 10 C45 25 30 45 15 48 Z" fill="#BA3C23" opacity="0.85"/>
+              <path d="M50 10 C53 8 56 6 58 4" stroke="#2D5A27" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <svg class="floating-spice-leaf spice-star-anise" viewBox="0 0 60 60" fill="none">
+              <polygon points="30,8 35,22 49,15 40,28 53,35 39,40 45,54 32,45 23,55 25,41 11,43 19,31 7,23 21,21 18,7 28,18" fill="#8C5B3E" opacity="0.8"/>
+            </svg>
+            <svg class="floating-spice-leaf spice-coriander" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="10" fill="#2D5A27" opacity="0.75"/>
+              <path d="M12 12 Q20 28 28 28" stroke="#1A1917" stroke-width="1.5"/>
+            </svg>
+
+            <!-- Floating Badge Card -->
+            <div class="hero-tag-card">
+              <span class="pulsing-dot"></span>
+              <span>Prepared in Small Batches Daily</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — "WHAT MAKES IT HOMEMADE?"
+         ========================================================================== -->
+    <section class="section" id="what-makes-it-homemade">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">The Homemade Philosophy</div>
+          <h2 class="heading-section">What Makes It Homemade?</h2>
+          <p class="lead-text">
+            No industrial commissaries, no frozen bases, and no artificial shortcuts. We cook in our family kitchen the way meals have been prepared for centuries.
+          </p>
+        </div>
+
+        <div class="homemade-cards-grid">
+          <!-- Card 1: Fresh Ingredients -->
+          <article class="homemade-card">
+            <div class="card-media-wrapper">
+              <div class="card-badge-num">01</div>
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80" alt="Fresh market vegetables and herbs" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Fresh Ingredients</h3>
+              <p class="card-desc">
+                Crisp vegetables handpicked every morning, farm-fresh poultry, whole spices ground on stone, and unadulterated oils and ghee.
+              </p>
+              <div class="card-interactive-note">
+                <span>Hand-sorted at dawn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Traditional Recipes -->
+          <article class="homemade-card">
+            <div class="card-media-wrapper">
+              <div class="card-badge-num">02</div>
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Traditional kitchen spice jars and mortar" loading="lazy">
+              <!-- Handwritten recipe note reveal -->
+              <div class="recipe-note-preview">
+                "Roast coriander seeds with 3 cloves on low flame until nutty..."
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Traditional Recipes</h3>
+              <p class="card-desc">
+                Heirloom family recipes perfected over three generations. The exact balance of slow sautéing, balance, and patience.
+              </p>
+              <div class="card-interactive-note">
+                <span>Generational Secret Notes</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Slow & Fresh Cooking -->
+          <article class="homemade-card">
+            <div class="card-media-wrapper">
+              <div class="card-badge-num">03</div>
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Simmering pot with rich aromas" loading="lazy">
+              <div class="steam-mini-badge">
+                <span class="pulsing-dot" style="width:6px;height:6px;background:#fff;"></span>
+                <span>Gentle Simmer</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Slow & Fresh Cooking</h3>
+              <p class="card-desc">
+                Cooked inside seasoned iron skillets and earthenware pots. Slow simmering allows flavors to permeate every pore gently.
+              </p>
+              <div class="card-interactive-note">
+                <span>Porous Clay & Cast Iron</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Made With Care -->
+          <article class="homemade-card">
+            <div class="card-media-wrapper">
+              <div class="card-badge-num">04</div>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Warm table setting with fresh food" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Made With Care</h3>
+              <p class="card-desc">
+                Every plate is cooked as if our own children and grandparents are sitting at the table. Wholesome, nourishing, and pure.
+              </p>
+              <div class="card-interactive-note">
+                <span>From Our Family to Yours</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03 — VEGETARIAN EXPERIENCE
+         ========================================================================== -->
+    <section class="section section-vegetarian" id="vegetarian-experience">
+      <div class="veg-accent-leaves"></div>
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow eyebrow-veg">Pure Botanical Goodness</div>
+          <h2 class="heading-section">Fresh From The Garden. Straight To Your Plate.</h2>
+          <p class="lead-text">
+            Vibrant, nutrient-dense vegetables, farm-churned malai paneer, and rich heirloom lentils simmered with freshly ground green spices.
+          </p>
+        </div>
+
+        <!-- Interactive Ingredient-to-Dish Transformation Showcase -->
+        <div class="transformation-container">
+          <!-- Step Switcher Nav -->
+          <div class="transform-nav-steps" role="tablist">
+            <button class="transform-step-btn veg-step-btn active" data-step="0" role="tab">
+              <span class="step-num-pill">01</span>
+              <div class="step-meta">
+                <h4>Garden Harvest</h4>
+                <p>Crisp Morning Greens</p>
+              </div>
+            </button>
+            <button class="transform-step-btn veg-step-btn" data-step="1" role="tab">
+              <span class="step-num-pill">02</span>
+              <div class="step-meta">
+                <h4>Knife & Prep</h4>
+                <p>Gentle Uniform Dicing</p>
+              </div>
+            </button>
+            <button class="transform-step-btn veg-step-btn" data-step="2" role="tab">
+              <span class="step-num-pill">03</span>
+              <div class="step-meta">
+                <h4>Stone Spices</h4>
+                <p>Toasted Masala Paste</p>
+              </div>
+            </button>
+            <button class="transform-step-btn veg-step-btn" data-step="3" role="tab">
+              <span class="step-num-pill">04</span>
+              <div class="step-meta">
+                <h4>Clay Pot Simmer</h4>
+                <p>Low Flame Steaming</p>
+              </div>
+            </button>
+            <button class="transform-step-btn veg-step-btn" data-step="4" role="tab">
+              <span class="step-num-pill">05</span>
+              <div class="step-meta">
+                <h4>Finished Dish</h4>
+                <p>Plated With Malai & Herbs</p>
+              </div>
+            </button>
+          </div>
+
+          <!-- Dynamic Display Box -->
+          <div class="transform-display-grid">
+            <div class="transform-visual-box">
+              <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80" alt="Fresh Harvest" class="transform-img-slide veg-slide active" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80" alt="Artisanal Chopping" class="transform-img-slide veg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80" alt="Stone Ground Spices" class="transform-img-slide veg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" alt="Slow Clay Pot Simmer" class="transform-img-slide veg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80" alt="Finished Vegetarian Feast" class="transform-img-slide veg-slide" loading="lazy">
+
+              <div class="transform-badge-overlay">
+                <span class="diet-dot-square" style="color:var(--accent-veg);"><span class="dot"></span></span>
+                <span id="vegBadgeText">Stage 01: Farm Fresh Harvest</span>
+              </div>
+            </div>
+
+            <div class="transform-content-panel">
+              <h3 class="transform-content-title" id="vegStepTitle">01 — Hand-Harvested Morning Greens</h3>
+              <p class="transform-content-desc" id="vegStepDesc">
+                Every dawn begins with selecting crisp seasonal okra, cauliflower florets, vine-ripened tomatoes, and baby spinach directly from local pesticide-free heirloom farms.
+              </p>
+              <div class="transform-ingredient-chips" id="vegStepChips">
+                <span class="ingredient-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Crisp Okra</span>
+                <span class="ingredient-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Local Heirloom Tomatoes</span>
+                <span class="ingredient-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Baby Spinach</span>
+                <span class="ingredient-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Tender Green Peas</span>
+              </div>
+              <a href="#signature-dishes" class="btn btn-veg">Explore Vegetarian Curries</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Veg Highlights Showcase Cards -->
+        <div class="veg-dishes-showcase">
+          <div class="veg-dishes-grid">
+            <div class="dish-card" data-id="dish-2" data-type="veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+                </div>
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Garden Vegetable Curry" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">Clay Pot Handi</span>
+                  <span class="dish-time">⏱ 35 mins</span>
+                </div>
+                <h4 class="dish-title">Garden Heritage Vegetable Curry</h4>
+                <p class="dish-desc">Seasonal vegetables cooked with aromatic herbs, coconut milk and roasted cumin.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                  <span class="dish-price">$16.00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dish-card" data-id="dish-4" data-type="veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+                </div>
+                <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=80" alt="Artisanal Shahi Paneer" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">Fresh Farm Paneer</span>
+                  <span class="dish-time">⏱ 40 mins</span>
+                </div>
+                <h4 class="dish-title">Artisanal Shahi Paneer</h4>
+                <p class="dish-desc">Soft homemade malai paneer simmered in velvet cashew-tomato cream gravy.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                  <span class="dish-price">$17.50</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dish-card" data-id="dish-6" data-type="veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+                </div>
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80" alt="Slow-Simmered Dal Makhani" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">16-Hour Simmer</span>
+                  <span class="dish-time">⏱ 16 hrs</span>
+                </div>
+                <h4 class="dish-title">Slow-Simmered Dal Makhani</h4>
+                <p class="dish-desc">Whole black lentils cooked overnight over slow charcoal with hand-churned butter.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                  <span class="dish-price">$15.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04 — NON-VEGETARIAN EXPERIENCE
+         ========================================================================== -->
+    <section class="section section-nonveg" id="non-vegetarian-experience">
+      <div class="nonveg-accent-heat"></div>
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow eyebrow-nonveg">Artisanal Slow Cooked Meats</div>
+          <h2 class="heading-section">Rich Flavours. Slow Cooked. Perfectly Prepared.</h2>
+          <p class="lead-text">
+            Tender pasture-raised poultry, aromatic biryanis, and coastal fish curries marinated overnight in yogurt and roasted spices.
+          </p>
+        </div>
+
+        <!-- Cinematic Non-Veg Cooking Journey -->
+        <div class="journey-container">
+          <div class="journey-nav-steps" role="tablist">
+            <button class="journey-step-btn nonveg-step-btn active" data-step="0" role="tab">
+              <span class="step-num-pill">01</span>
+              <div class="step-meta">
+                <h4>Fresh Cuts</h4>
+                <p>Pasture-Raised</p>
+              </div>
+            </button>
+            <button class="journey-step-btn nonveg-step-btn" data-step="1" role="tab">
+              <span class="step-num-pill">02</span>
+              <div class="step-meta">
+                <h4>Marination</h4>
+                <p>Hung Curd & Deggi</p>
+              </div>
+            </button>
+            <button class="journey-step-btn nonveg-step-btn" data-step="2" role="tab">
+              <span class="step-num-pill">03</span>
+              <div class="step-meta">
+                <h4>Cast Iron Sear</h4>
+                <p>High Heat Browning</p>
+              </div>
+            </button>
+            <button class="journey-step-btn nonveg-step-btn" data-step="3" role="tab">
+              <span class="step-num-pill">04</span>
+              <div class="step-meta">
+                <h4>Spices Infusion</h4>
+                <p>Golden Onions</p>
+              </div>
+            </button>
+            <button class="journey-step-btn nonveg-step-btn" data-step="4" role="tab">
+              <span class="step-num-pill">05</span>
+              <div class="step-meta">
+                <h4>Slow Dum</h4>
+                <p>Dough Sealed Pot</p>
+              </div>
+            </button>
+            <button class="journey-step-btn nonveg-step-btn" data-step="5" role="tab">
+              <span class="step-num-pill">06</span>
+              <div class="step-meta">
+                <h4>Royal Feast</h4>
+                <p>Piping Hot Platter</p>
+              </div>
+            </button>
+          </div>
+
+          <div class="journey-display-grid">
+            <div class="transform-visual-box">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Fresh tender cuts" class="transform-img-slide nonveg-slide active" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" alt="Marination" class="transform-img-slide nonveg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=900&q=80" alt="Cast iron sear" class="transform-img-slide nonveg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=900&q=80" alt="Spices infusion" class="transform-img-slide nonveg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80" alt="Slow Dum Simmer" class="transform-img-slide nonveg-slide" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=80" alt="Finished Royal Biryani" class="transform-img-slide nonveg-slide" loading="lazy">
+
+              <div class="transform-badge-overlay" style="color:var(--accent-nonveg);">
+                <span class="diet-dot-square" style="color:var(--accent-nonveg);"><span class="dot"></span></span>
+                <span id="nonvegBadgeText">Stage 01: Fresh Sourcing</span>
+              </div>
+            </div>
+
+            <div class="transform-content-panel">
+              <h3 class="transform-content-title" id="nonvegStepTitle">01 — Ethically Sourced Tender Cuts</h3>
+              <p class="transform-content-desc" id="nonvegStepDesc">
+                We exclusively source tender, pasture-raised country chicken and fresh river fish delivered daily. Every piece is cleaned with turmeric and lemon water to ensure purity.
+              </p>
+              <div class="transform-ingredient-chips" id="nonvegStepChips">
+                <span class="ingredient-chip nonveg-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Pasture-Raised Chicken</span>
+                <span class="ingredient-chip nonveg-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Tender Bone-in Cuts</span>
+                <span class="ingredient-chip nonveg-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Wild River Fish</span>
+                <span class="ingredient-chip nonveg-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Turmeric & Lemon Wash</span>
+              </div>
+              <a href="#signature-dishes" class="btn btn-nonveg">Explore Non-Veg Specials</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Non-Veg Showcase Cards -->
+        <div class="veg-dishes-showcase">
+          <div class="veg-dishes-grid">
+            <div class="dish-card" data-id="dish-1" data-type="non-veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator non-veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+                </div>
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Homestyle Country Chicken Curry" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">Grandmother's Recipe</span>
+                  <span class="dish-time">⏱ 45 mins</span>
+                </div>
+                <h4 class="dish-title">Homestyle Country Chicken Curry</h4>
+                <p class="dish-desc">Slow cooked with freshly ground spices, roasted coriander, and caramelized shallots.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                  </div>
+                  <span class="dish-price">$18.50</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dish-card" data-id="dish-3" data-type="non-veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator non-veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+                </div>
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Royal Saffron Dum Biryani" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">Dough-Sealed Dum</span>
+                  <span class="dish-time">⏱ 2.5 hrs</span>
+                </div>
+                <h4 class="dish-title">Royal Saffron Dum Biryani</h4>
+                <p class="dish-desc">Layered aged basmati rice, aromatic spices, and slow-cooked marinated chicken.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                  <span class="dish-price">$21.00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dish-card" data-id="dish-5" data-type="non-veg">
+              <div class="dish-media">
+                <div class="dish-badge-diet diet-indicator non-veg">
+                  <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+                </div>
+                <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Charcoal Char-Grilled Chicken" loading="lazy">
+                <div class="dish-view-cta">View Dish Story</div>
+              </div>
+              <div class="dish-body">
+                <div class="dish-meta-row">
+                  <span class="dish-origin">Fruitwood Embers</span>
+                  <span class="dish-time">⏱ 30 mins</span>
+                </div>
+                <h4 class="dish-title">Charcoal Char-Grilled Chicken</h4>
+                <p class="dish-desc">Tender boneless cuts charred over natural coals with roasted cumin and lime.</p>
+                <div class="dish-footer">
+                  <div class="dish-spice-meter">
+                    <span>Spice</span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                  </div>
+                  <span class="dish-price">$19.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — INTERACTIVE "FROM INGREDIENT TO PLATE"
+         ========================================================================== -->
+    <section class="section-full-transformation" id="from-ingredient-to-plate">
+      <div class="container">
+        <div class="transformation-stage-header">
+          <div class="stage-tracker">
+            <button class="tracker-btn vessel-stage-btn active" data-stage="0">01 Fresh Ingredients</button>
+            <button class="tracker-btn vessel-stage-btn" data-stage="1">02 Prepared With Care</button>
+            <button class="tracker-btn vessel-stage-btn" data-stage="2">03 Cooked Slowly</button>
+            <button class="tracker-btn vessel-stage-btn" data-stage="3">04 Served Fresh</button>
+          </div>
+          <h2 class="heading-section" style="color:#fff;">The Alchemy of the Hearth</h2>
+          <p class="lead-text" style="color:var(--text-light-muted); margin: 0 auto;">
+            Watch raw harvest transform through patience, stone friction, and gentle embers into culinary soul food.
+          </p>
+        </div>
+
+        <div class="stage-showcase-display">
+          <!-- Central Morphing Vessel / Plate with Canvas Steam -->
+          <div class="central-vessel-stage">
+            <canvas class="vessel-steam-canvas" id="vesselSteamCanvas"></canvas>
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=80" alt="Fresh Raw Ingredients" class="vessel-slide active" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1200&q=80" alt="Preparation with care" class="vessel-slide" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80" alt="Slow Simmering Vessel" class="vessel-slide" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Served Fresh Feast" class="vessel-slide" loading="lazy">
+          </div>
+
+          <!-- Stage Narrative Details -->
+          <div class="stage-info-card">
+            <div class="stage-number-watermark" id="stageNumWatermark">01</div>
+            <h3 class="stage-info-title" id="stageInfoTitle">01 — Fresh Ingredients</h3>
+            <p class="stage-info-desc" id="stageInfoDesc">
+              Every dish originates from soil, sun, and pure craft. We source sun-ripened vegetables, farm poultry, whole spices, and raw grain straight from trusted growers.
+            </p>
+
+            <div class="stage-highlights">
+              <div class="stage-highlight-item" id="stagePoint1">
+                <div class="stage-highlight-icon">✓</div>
+                <div class="stage-highlight-text">
+                  <strong>100% Raw & Unprocessed</strong>
+                  <span>No synthetic concentrates, artificial colors, or premade packaged gravies.</span>
+                </div>
+              </div>
+              <div class="stage-highlight-item" id="stagePoint2">
+                <div class="stage-highlight-icon">✓</div>
+                <div class="stage-highlight-text">
+                  <strong>Farm-to-Door Within Hours</strong>
+                  <span>Vegetables and poultry arrive daily at sunrise for prompt artisanal prep.</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary trigger-order-modal">Taste The Difference</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06 — SIGNATURE DISHES
+         ========================================================================== -->
+    <section class="section" id="signature-dishes">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">Handcrafted Menu</div>
+          <h2 class="heading-section">Signature Hearth Dishes</h2>
+          <p class="lead-text">
+            Each creation tells a story of heritage recipes, slow braising, and authentic homemade taste. Click any dish to explore recipe secrets and ingredients.
+          </p>
+
+          <!-- Gallery Filters -->
+          <div class="signature-filters">
+            <button class="filter-btn active" data-filter="all">All Dishes</button>
+            <button class="filter-btn" data-filter="veg">
+              <span class="diet-dot-square" style="color:var(--accent-veg);"><span class="dot"></span></span> Vegetarian
+            </button>
+            <button class="filter-btn" data-filter="non-veg">
+              <span class="diet-dot-square" style="color:var(--accent-nonveg);"><span class="dot"></span></span> Non-Vegetarian
+            </button>
+          </div>
+        </div>
+
+        <!-- Dishes Masonry Grid -->
+        <div class="signature-gallery">
+          <!-- Dish 1 -->
+          <article class="dish-card" data-id="dish-1" data-type="non-veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator non-veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+              </div>
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Homestyle Chicken Curry" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Grandmother's Hearth</span>
+                <span class="dish-time">⏱ 45 mins</span>
+              </div>
+              <h3 class="dish-title">Homestyle Country Chicken Curry</h3>
+              <p class="dish-desc">Slow cooked with freshly ground spices, roasted coriander, and caramelized shallots.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                </div>
+                <span class="dish-price">$18.50</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 2 -->
+          <article class="dish-card" data-id="dish-2" data-type="veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+              </div>
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Garden Vegetable Curry" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Seasonal Farmstead</span>
+                <span class="dish-time">⏱ 35 mins</span>
+              </div>
+              <h3 class="dish-title">Garden Heritage Vegetable Curry</h3>
+              <p class="dish-desc">Seasonal vegetables cooked with aromatic herbs, coconut milk and roasted cumin.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot"></span>
+                </div>
+                <span class="dish-price">$16.00</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 3 -->
+          <article class="dish-card" data-id="dish-3" data-type="non-veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator non-veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+              </div>
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Royal Saffron Dum Biryani" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Traditional Dum</span>
+                <span class="dish-time">⏱ 2.5 hrs</span>
+              </div>
+              <h3 class="dish-title">Royal Saffron Dum Biryani</h3>
+              <p class="dish-desc">Layered aged basmati rice, aromatic spices, and slow-cooked marinated chicken.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot"></span>
+                </div>
+                <span class="dish-price">$21.00</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 4 -->
+          <article class="dish-card" data-id="dish-4" data-type="veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+              </div>
+              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=80" alt="Artisanal Shahi Paneer" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Fresh Farm Malai</span>
+                <span class="dish-time">⏱ 40 mins</span>
+              </div>
+              <h3 class="dish-title">Artisanal Shahi Paneer</h3>
+              <p class="dish-desc">Soft homemade malai paneer simmered in velvet cashew-tomato cream gravy.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                </div>
+                <span class="dish-price">$17.50</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 5 -->
+          <article class="dish-card" data-id="dish-5" data-type="non-veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator non-veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Non-Veg
+              </div>
+              <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Charcoal Char-Grilled Chicken" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Fruitwood Embers</span>
+                <span class="dish-time">⏱ 30 mins</span>
+              </div>
+              <h3 class="dish-title">Charcoal Char-Grilled Chicken</h3>
+              <p class="dish-desc">Boneless chicken marinated in roasted cumin, hung curd, and charred over fruitwood coals.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot active"></span>
+                </div>
+                <span class="dish-price">$19.00</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 6 -->
+          <article class="dish-card" data-id="dish-6" data-type="veg">
+            <div class="dish-media">
+              <div class="dish-badge-diet diet-indicator veg">
+                <span class="diet-dot-square"><span class="dot"></span></span> Vegetarian
+              </div>
+              <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80" alt="Slow-Simmered Dal Makhani" loading="lazy">
+              <div class="dish-view-cta">View Dish Story</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta-row">
+                <span class="dish-origin">Overnight Clay Pot</span>
+                <span class="dish-time">⏱ 16 hrs</span>
+              </div>
+              <h3 class="dish-title">Slow-Simmered Dal Makhani</h3>
+              <p class="dish-desc">Whole black lentils cooked overnight over slow charcoal with hand-churned butter.</p>
+              <div class="dish-footer">
+                <div class="dish-spice-meter">
+                  <span>Spice</span>
+                  <span class="spice-dot active"></span>
+                  <span class="spice-dot"></span>
+                  <span class="spice-dot"></span>
+                </div>
+                <span class="dish-price">$15.00</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 07 — OUR COOKING PROCESS
+         ========================================================================== -->
+    <section class="section section-cream-alt section-process" id="cooking-process">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">Artisan Principles</div>
+          <h2 class="heading-section">The Way We Cook Matters.</h2>
+          <p class="lead-text">
+            Our five-step kitchen discipline ensures every meal possesses the unhurried depth, aroma, and vitality of true homemade cooking.
+          </p>
+        </div>
+
+        <div class="process-timeline-wrapper">
+          <!-- Animated Center Progress Line -->
+          <div class="process-line-track">
+            <div class="process-line-progress"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="step-card-left">
+              <div class="step-num-label">Step 01</div>
+              <h3 class="step-title">Select Fresh Ingredients</h3>
+              <p class="step-desc">
+                Hand-picked vegetables, whole raw spices, and unadulterated oils sourced fresh each morning before dawn.
+              </p>
+            </div>
+            <div class="timeline-node">1</div>
+            <div style="grid-column:3;"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div style="grid-column:1;"></div>
+            <div class="timeline-node">2</div>
+            <div class="step-card-right">
+              <div class="step-num-label">Step 02</div>
+              <h3 class="step-title">Prepare From Scratch</h3>
+              <p class="step-desc">
+                Stone grinding whole spices, slow overnight marinations, and hand-kneading whole wheat rotis. Zero frozen shortcuts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="step-card-left">
+              <div class="step-num-label">Step 03</div>
+              <h3 class="step-title">Cook With Traditional Methods</h3>
+              <p class="step-desc">
+                Cast iron kadai searing, dough-sealed earthen pots, and unhurried charcoal simmering for authentic aroma and tenderness.
+              </p>
+            </div>
+            <div class="timeline-node">3</div>
+            <div style="grid-column:3;"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div style="grid-column:1;"></div>
+            <div class="timeline-node">4</div>
+            <div class="step-card-right">
+              <div class="step-num-label">Step 04</div>
+              <h3 class="step-title">Taste & Perfect</h3>
+              <p class="step-desc">
+                Calibrating acidity, spice heat, and natural umami with freshly crushed coriander and hand-churned ghee before plating.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step">
+            <div class="step-card-left">
+              <div class="step-num-label">Step 05</div>
+              <h3 class="step-title">Serve Fresh</h3>
+              <p class="step-desc">
+                Delivered piping hot with rising steam directly to your family table. Pure wholesome nutrition that feels like home.
+              </p>
+            </div>
+            <div class="timeline-node">5</div>
+            <div style="grid-column:3;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 08 — FARM / MARKET TO KITCHEN
+         ========================================================================== -->
+    <section class="section section-horizontal-journey" id="market-to-kitchen">
+      <div class="container journey-pinned-header">
+        <div class="eyebrow" style="color:var(--accent-gold);">Soil to Soul</div>
+        <h2 class="heading-section" style="color:#fff;">We believe great food starts with great ingredients.</h2>
+        <p class="lead-text" style="color:var(--text-light-muted);">
+          Drag or swipe through our farm-to-table pathway across sunrise markets, rustic chopping boards, seasoned pots, and warm plates.
+        </p>
+      </div>
+
+      <div class="panoramic-track-container" id="panoramicContainer">
+        <div class="panoramic-track">
+          <!-- Card 1: The Sunrise Market -->
+          <div class="panoramic-card">
+            <div class="panoramic-media">
+              <span class="panoramic-step-pill">01 / The Market</span>
+              <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=800&q=80" alt="Farmer's market produce" loading="lazy">
+            </div>
+            <div class="panoramic-content">
+              <h3 class="panoramic-title">Sunrise Farmers Market</h3>
+              <p class="panoramic-desc">
+                Every ingredient is chosen by hand from generational organic farmers who treat earth with reverence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Stone Grinding & Knife Work -->
+          <div class="panoramic-card">
+            <div class="panoramic-media">
+              <span class="panoramic-step-pill">02 / The Prep</span>
+              <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=800&q=80" alt="Chef prep board" loading="lazy">
+            </div>
+            <div class="panoramic-content">
+              <h3 class="panoramic-title">Artisanal Knife & Stone Work</h3>
+              <p class="panoramic-desc">
+                Whole ginger roots, garlic cloves, and turmeric mashed on granite slabs to liberate pure volatile oils.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: The Earthen Kitchen -->
+          <div class="panoramic-card">
+            <div class="panoramic-media">
+              <span class="panoramic-step-pill">03 / The Kitchen</span>
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Rustic home kitchen" loading="lazy">
+            </div>
+            <div class="panoramic-content">
+              <h3 class="panoramic-title">Earthen Flame & Handis</h3>
+              <p class="panoramic-desc">
+                Low-flame simmering where ingredients merge together over hours rather than minutes of high-pressure cooking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: The Nourishing Table -->
+          <div class="panoramic-card">
+            <div class="panoramic-media">
+              <span class="panoramic-step-pill">04 / The Table</span>
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Dining feast table" loading="lazy">
+            </div>
+            <div class="panoramic-content">
+              <h3 class="panoramic-title">The Shared Family Plate</h3>
+              <p class="panoramic-desc">
+                Hot rotis, bubbling curries, and comforting conversations that rekindle childhood memories of home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 09 — FOOD CATEGORIES (VEG & NON-VEG DUAL SHOWCASE)
+         ========================================================================== -->
+    <section class="section" id="food-categories">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">Explore Our Repertory</div>
+          <h2 class="heading-section">Culinary Categories</h2>
+          <p class="lead-text">
+            Switch smoothly between our pure vegetarian garden creations and our rich slow-braised non-vegetarian specialties.
+          </p>
+
+          <!-- Category Switch Buttons -->
+          <div class="category-switch-wrapper">
+            <div class="category-switch">
+              <button class="category-tab-btn tab-veg active" data-category="veg">
+                <span class="diet-dot-square" style="color:currentColor;"><span class="dot"></span></span>
+                <span>Vegetarian Kitchen</span>
+              </button>
+              <button class="category-tab-btn tab-nonveg" data-category="nonveg">
+                <span class="diet-dot-square" style="color:currentColor;"><span class="dot"></span></span>
+                <span>Non-Vegetarian Kitchen</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="categories-content-viewport">
+          <!-- VEGETARIAN PANEL -->
+          <div class="category-panel active" id="catPanel-veg">
+            <div class="category-subgrid">
+              <!-- Subcategory 1 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80" alt="Paneer Delicacies" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Paneer & Malai Specialties</h3>
+                  <p class="category-subcard-desc">Made daily from farm milk. Shahi Paneer, Kadai Paneer, and Palak Paneer.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Fresh Farm Cheese</span>
+                    <span class="tag-badge">Slow Gravy</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subcategory 2 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" alt="Heirloom Curries" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Heritage Vegetable Curries</h3>
+                  <p class="category-subcard-desc">Seasonal vegetables, tender baby potatoes, koftas, and coconut stews.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Garden Harvest</span>
+                    <span class="tag-badge">Clay Handi</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subcategory 3 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Slow Dals and Grains" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Slow Dals & Basmati Grains</h3>
+                  <p class="category-subcard-desc">Overnight simmered black lentils, yellow tadka dal, and saffron basmati.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Overnight Simmer</span>
+                    <span class="tag-badge">Cow Ghee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NON-VEGETARIAN PANEL -->
+          <div class="category-panel" id="catPanel-nonveg">
+            <div class="category-subgrid">
+              <!-- Subcategory 1 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Chicken Specialties" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Homestyle Poultry & Curries</h3>
+                  <p class="category-subcard-desc">Tender bone-in chicken slow simmered in iron kadai with caramelized onions.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Pasture Raised</span>
+                    <span class="tag-badge">Cast Iron Sear</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subcategory 2 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Royal Biryani" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Dough-Sealed Dum Biryani</h3>
+                  <p class="category-subcard-desc">Long grain aged basmati layered with yogurt-marinated tender meat & saffron.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Slow Dum</span>
+                    <span class="tag-badge">Kashmiri Saffron</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subcategory 3 -->
+              <div class="category-subcard">
+                <div class="category-subcard-media">
+                  <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80" alt="Charcoal Grills" loading="lazy">
+                </div>
+                <div class="category-subcard-body">
+                  <h3 class="category-subcard-title">Charcoal Skewers & Fish</h3>
+                  <p class="category-subcard-desc">Open ember grilled chicken skewers, spiced coastal fish roasts, and spiced chops.</p>
+                  <div class="category-tags-list">
+                    <span class="tag-badge">Natural Fruitwood</span>
+                    <span class="tag-badge">Smoky Crust</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10 — WHY CHOOSE US?
+         ========================================================================== -->
+    <section class="section section-cream-alt" id="why-choose-us">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">Our Kitchen Standards</div>
+          <h2 class="heading-section">Why Choose Us?</h2>
+          <p class="lead-text">
+            We hold ourselves to the standard of a loving home kitchen, where quality and health are non-negotiable.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Block 1 -->
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fresh Every Day</h3>
+            <p class="feature-desc">
+              We never freeze curries or rely on day-old bases. Every pot is cooked fresh in morning and evening batches.
+            </p>
+          </div>
+
+          <!-- Block 2 -->
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Authentic Recipes</h3>
+            <p class="feature-desc">
+              Heirloom recipes passed down generations, balancing complex aromas without artificial flavor powders or MSG.
+            </p>
+          </div>
+
+          <!-- Block 3 -->
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Quality Ingredients</h3>
+            <p class="feature-desc">
+              Pure cold-pressed oils, pure butter and ghee, pesticide-free vegetables, and clean unadulterated spices.
+            </p>
+          </div>
+
+          <!-- Block 4 -->
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Made With Care</h3>
+            <p class="feature-desc">
+              Prepared with genuine maternal hospitality. You feel light, nourished, and deeply comforted after every meal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 11 — CUSTOMER EXPERIENCE
+         ========================================================================== -->
+    <section class="section testimonials-section" id="customer-experience">
+      <div class="container">
+        <div class="text-center">
+          <div class="eyebrow">From Our Family Table</div>
+          <h2 class="heading-section">Stories From Our Diners</h2>
+        </div>
+
+        <div class="testimonials-carousel-wrapper">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active">
+            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="testimonial-quote">
+              "Every dish tastes like it came straight from a loving family kitchen. The chicken curry and the dal makhani have a depth you simply cannot find in modern commercial restaurants."
+            </p>
+            <div class="testimonial-author-meta">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Priya Sharma" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <div class="author-name">Priya Sharma</div>
+                <div class="author-location">Kensington, Verified Patron</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="testimonial-quote">
+              "Being away from home for university, ordering their weekly vegetarian tiffin felt like receiving a care package from my mother. The handmade rotis stay soft and fragrant until the last bite."
+            </p>
+            <div class="testimonial-author-meta">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Arjun Mehta" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <div class="author-name">Arjun Mehta</div>
+                <div class="author-location">Canary Wharf, Weekly Subscriber</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="testimonial-quote">
+              "The Dum Biryani is extraordinarily balanced—not oily, not artificially colored, just pristine fragrant rice and tender meat imbued with real saffron and whole cardamom. Pure culinary honesty."
+            </p>
+            <div class="testimonial-author-meta">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <div class="author-name">Sarah Jenkins</div>
+                <div class="author-location">Greenwich, Culinary Columnist</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+              <span class="carousel-dot" data-slide="2"></span>
+            </div>
+            <button class="carousel-btn" id="nextTestimonial" aria-label="Next Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 12 — FINAL CTA
+         ========================================================================== -->
+    <section class="final-cta-section" id="final-cta">
+      <canvas class="cta-steam-canvas" id="ctaSteamCanvas"></canvas>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80" alt="Grand Homemade Culinary Table Feast" class="final-cta-bg" loading="lazy">
+      <div class="final-cta-overlay"></div>
+
+      <div class="final-cta-content">
+        <div class="eyebrow" style="color:var(--accent-gold);">Come Sit With Us</div>
+        <h2 class="final-cta-headline">Good Food Feels Like Home.</h2>
+        <p class="final-cta-subtext">
+          Discover fresh, authentic homemade cooking prepared with care. Savor the comforting aroma of hand-pounded spices, piping hot flatbreads, and slow-simmered curries.
+        </p>
+        <div class="final-cta-actions">
+          <a href="#signature-dishes" class="btn btn-light">Explore Our Food</a>
+          <button class="btn btn-pill trigger-order-modal" style="background:var(--accent-gold); color:var(--bg-charcoal);">
+            Order Fresh Batch
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-top-grid">
+      <!-- Col 1: Brand & Philosophy -->
+      <div class="footer-brand">
+        <div class="brand-logo" style="margin-bottom: 0.8rem;">
+          <div class="brand-symbol">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2c2 3 4 5.5 4 8.5a4 4 0 0 1-8 0C8 7.5 10 5 12 2z"></path>
+              <path d="M6 14v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4"></path>
+              <line x1="4" y1="14" x2="20" y2="14"></line>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">The Homemade Hearth</span>
+            <span class="brand-subtitle">Authentic Kitchen</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Preserving traditional domestic cooking heritage with fresh, unadulterated ingredients and slow stovetop care for vegetarians and meat lovers alike.
+        </p>
+        <div class="footer-dietary-pledge">
+          <div class="footer-dietary-badge" style="color:#7ed957;">
+            <span class="diet-dot-square" style="color:#7ed957;"><span class="dot"></span></span> Pure Veg Dedicated Pot
+          </div>
+          <div class="footer-dietary-badge" style="color:#ff6b4a;">
+            <span class="diet-dot-square" style="color:#ff6b4a;"><span class="dot"></span></span> Separate Non-Veg Hearth
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">Explore</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#hero">From Our Home</a></li>
+          <li><a href="#what-makes-it-homemade">What Makes It Homemade</a></li>
+          <li><a href="#vegetarian-experience">Vegetarian Experience</a></li>
+          <li><a href="#non-vegetarian-experience">Non-Vegetarian Experience</a></li>
+          <li><a href="#signature-dishes">Signature Dishes</a></li>
+          <li><a href="#cooking-process">Our Cooking Process</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Kitchen & Contact Details -->
+      <div class="footer-contact-col">
+        <h4 class="footer-col-title">Hearth Kitchen</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>14 Rosemary Lane, Artisanal Quarter, London & Home Delivery</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Batches: Lunch 11am–3pm | Dinner 6pm–10pm</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+44 (0) 20 7946 0812</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 4: Newsletter & Daily Specials -->
+      <div class="footer-newsletter-col">
+        <h4 class="footer-col-title">Hearth Dispatch</h4>
+        <p class="footer-newsletter-text">
+          Receive our weekly seasonal menu, heirloom secret recipes, and special weekend batch alerts.
+        </p>
+        <form class="footer-subscribe-form" id="newsletterForm">
+          <input type="email" class="footer-subscribe-input" placeholder="Your email address..." required>
+          <button type="submit" class="footer-subscribe-btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Row -->
+    <div class="container footer-bottom">
+      <div>&copy; 2026 The Homemade Hearth. All rights reserved. Authentic Homemade Food.</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="#" class="footer-social-link" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: INTERACTIVE DISH DETAIL & RECIPE STORY MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="dishDetailModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      <div class="modal-hero-banner">
+        <img id="modalDishImg" src="" alt="Dish preview">
+      </div>
+      <div class="modal-content-inner">
+        <div class="modal-tags-row">
+          <span class="diet-indicator" id="modalDietBadge"></span>
+          <span class="eyebrow" id="modalDishOrigin" style="margin-bottom:0;"></span>
+        </div>
+        <h3 class="modal-dish-title" id="modalDishTitle"></h3>
+        <p class="modal-dish-story" id="modalDishStory"></p>
+
+        <div class="modal-details-grid">
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Cooking Vessel</span>
+            <span class="modal-detail-value" id="modalCookVessel">Seasoned Cast Iron</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Slow Cook Time</span>
+            <span class="modal-detail-value" id="modalCookTime">45 Minutes</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Portion Size</span>
+            <span class="modal-detail-value" id="modalServings">Serves 2–3</span>
+          </div>
+        </div>
+
+        <div class="modal-ingredients-section">
+          <h4>Artisanal Ingredients Used</h4>
+          <div class="modal-ingredients-chips" id="modalIngredientsList"></div>
+        </div>
+
+        <div class="modal-footer-action">
+          <div class="dish-price" id="modalDishPrice" style="font-size:1.6rem;"></div>
+          <button class="btn btn-primary" id="modalOrderBtn">Request This Batch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: ORDER & INQUIRY MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true">
+    <div class="modal-card order-modal-card">
+      <button class="modal-close-btn" id="orderModalClose" aria-label="Close Modal">&times;</button>
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <div class="eyebrow">Direct From Our Stove</div>
+        <h3 class="heading-section" style="font-size: 2rem;">Order Fresh Homemade Batch</h3>
+        <p class="lead-text" style="font-size: 0.95rem;">
+          We prepare meals in fresh, limited daily batches. Leave your preferred choices below and our kitchen team will promptly confirm.
+        </p>
+      </div>
+
+      <form id="orderInquiryForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone / WhatsApp Number</label>
+          <input type="tel" class="form-input" placeholder="+1 / +44 your number" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Select Dish or Tiffin Plan</label>
+          <select class="form-select" id="inquiryDishSelect">
+            <option value="Homestyle Country Chicken Curry">Homestyle Country Chicken Curry (Non-Veg)</option>
+            <option value="Garden Heritage Vegetable Curry">Garden Heritage Vegetable Curry (Veg)</option>
+            <option value="Royal Saffron Dum Biryani">Royal Saffron Dum Biryani (Non-Veg)</option>
+            <option value="Artisanal Shahi Paneer">Artisanal Shahi Paneer (Veg)</option>
+            <option value="Slow-Simmered Dal Makhani">Slow-Simmered Dal Makhani (Veg)</option>
+            <option value="Charcoal Char-Grilled Chicken">Charcoal Char-Grilled Chicken (Non-Veg)</option>
+            <option value="Weekly Homemade Tiffin Plan">Weekly Homemade Tiffin Subscription</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Dietary Preferences & Spice Level</label>
+          <select class="form-select">
+            <option>Mild & Comforting (Kid Friendly)</option>
+            <option selected>Medium Traditional Spice</option>
+            <option>Rich & Fiery Desi Heat</option>
+            <option>Strict Pure Vegetarian (No Onion/Garlic option)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Special Cooking Notes / Delivery Address</label>
+          <textarea class="form-textarea" rows="3" placeholder="Tell us if you prefer extra lemon, less oil, or your delivery address..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          Confirm Batch Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu (Off-canvas) -->
+  <aside class="mobile-menu-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile Navigation Drawer">
+    <button class="mobile-drawer-close" aria-label="Close Mobile Menu">&times;</button>
+    <a href="#what-makes-it-homemade" class="mobile-menu-link">Our Story</a>
+    <a href="#vegetarian-experience" class="mobile-menu-link">Vegetarian Experience</a>
+    <a href="#non-vegetarian-experience" class="mobile-menu-link">Non-Vegetarian Experience</a>
+    <a href="#from-ingredient-to-plate" class="mobile-menu-link">Ingredient to Plate</a>
+    <a href="#signature-dishes" class="mobile-menu-link">Signature Dishes</a>
+    <a href="#cooking-process" class="mobile-menu-link">Cooking Process</a>
+    <a href="#food-categories" class="mobile-menu-link">Categories</a>
+    <a href="#why-choose-us" class="mobile-menu-link">Why Choose Us</a>
+    <button class="btn btn-primary trigger-order-modal" style="margin-top: 1rem;">Order Fresh Batch</button>
+  </aside>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span class="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- GSAP & ScrollTrigger Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
